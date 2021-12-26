@@ -5,10 +5,11 @@ import { PostsService} from '../posts.service';
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css'],
-  
+
 })
 export class PostsComponent implements OnInit {
   posts: any = [];
+  filterString: string = '';
 
   constructor(private postService:PostsService) { }
 
@@ -17,5 +18,4 @@ export class PostsComponent implements OnInit {
       this.posts = posts;
     });
   }
-
 }

@@ -9,6 +9,7 @@ router.get('/',(req,res) => {
   res.send("It works");
 });
 
+//get post
 router.get('/posts',(req,res) => {
   axios.get(`${postAPI}/posts`).then(posts => {
     //console.log(posts.data);

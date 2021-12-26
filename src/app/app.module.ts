@@ -7,6 +7,9 @@ import { PostsComponent } from './posts/posts.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { PostsService} from './posts.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
 
 const Routes = [
   {
@@ -23,11 +26,15 @@ const Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
+    Ng2SearchPipeModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     RouterModule.forRoot(Routes)
   ],

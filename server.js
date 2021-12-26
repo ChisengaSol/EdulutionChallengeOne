@@ -1,7 +1,9 @@
+
 const express = require('express');
 const path = require('path');
 const app = express();
 
+//get post routes
 const routes = require('./server/routes/routes');
 app.use(express.static(path.join(__dirname,'dist/challengeone/')));
 app.use('/routes',routes);
