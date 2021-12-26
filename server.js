@@ -1,4 +1,4 @@
-
+//configure express server
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -12,7 +12,8 @@ app.get('*',(req,res) => {
   res.sendFile(path.join(__dirname,'dist/challengeone/index.html'));
 });
 
-const port = process.env.PORT || 4600;
+//start app by listening on heroku default port
+const port = process.env.PORT || 8080;
 app.listen(port, (req, res) => {
   console.log(`RUNNING on port ${port}`);
 });
