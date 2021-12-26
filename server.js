@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const posts = require('./server/routes/posts');
+const routes = require('./server/routes/routes');
 app.use(express.static(path.join(__dirname,'dist/challengeone/')));
-app.use('/posts',posts);
+app.use('/routes',routes);
 
 app.get('*',(req,res) => {
   res.sendFile(path.join(__dirname,'dist/challengeone/index.html'));
